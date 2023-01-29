@@ -1,0 +1,16 @@
+{
+  "name": "min-mon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@geshan/axrio": "^1.0.1",
+    "express": "^4.17.1",
+    "puppeteer": "^19.6.2",
+    "puppeteer-core": "^3.3.0"
+  }
+}
