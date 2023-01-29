@@ -14,7 +14,7 @@ const browserP = puppeteer.launch({
 });
 
 setInterval(() => {
-  https.get("https://main-test-6.onrender.com", (res) => {
+  https.get("https://main-test-7.onrender.com", (res) => {
     console.log("Server is alive...");
   });
 }, (1000 * 60) * 5); //5min periods
