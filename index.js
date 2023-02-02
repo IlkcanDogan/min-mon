@@ -30,21 +30,27 @@ browserP.then((brw) => {
                 page.waitForSelector('#WebMinerBtn', {visible: true}).then(() => {
                   page.$eval('#WebMinerBtn', form => form.click() ).then(() => {
                     console.log("Mining Başladı...")
+                  }).catch(() => {
+                    console.log("err3")
                   })
+                }).catch(() => {
+                  console.log("err2")
                 })
+              }).catch(() => {
+                console.log("err1")
               })
-            })
-          })
+            }).catch(() => {
+                  console.log("err4")
+                })
+          }).catch(() => {
+                  console.log("err5")
+                })
 
           page.on('console', message => {
-            page.$$('#WebMinerHash').then((span) => {
-              span.pop().getProperty('innerText').then((obj) => {
-                obj.jsonValue().then((hs) => {
-                  console.log(message.text(), "Mining Power --> " + hs);
+            console.log(message.text());
+          }).catch(() => {
+                  console.log("err6")
                 })
-              })
-            })
-          });
       });
   })
 })
