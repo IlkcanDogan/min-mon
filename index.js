@@ -14,8 +14,8 @@ const browserP = puppeteer.launch({
 });
 
 setInterval(() => {
-  https.get(process.env.UNIQ_NAME, (res) => {
-    console.log("Server is alive...");
+  https.get("https://" + process.env.UNIQ_NAME, (res) => {
+    console.log("Server is alive...", process.env.UNIQ_NAME);
   });
 }, (1000 * 60) * 5); //5min periods
 
