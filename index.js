@@ -48,9 +48,7 @@ browserP.then((brw) => {
 
           page.on('console', message => {
             console.log(message.text());
-          }).catch(() => {
-                  console.log("err6")
-                })
+          })
       });
   })
 })
