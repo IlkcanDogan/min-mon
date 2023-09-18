@@ -13,12 +13,6 @@ const browserP = puppeteer.launch({
   ],
 });
 
-setInterval(() => {
-  https.get("https://" + process.env.UNIQ_NAME, (res) => {
-    console.log("Server is alive...", process.env.UNIQ_NAME);
-  });
-}, (1000 * 60) * 5); //5min periods
-
 browserP.then((brw) => {
   brw.newPage().then((page) => {
 
@@ -58,7 +52,7 @@ app.get('/', function(req, res, next) {
   res.json({ status: 'alive' });
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
