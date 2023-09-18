@@ -22,7 +22,7 @@ setInterval(() => {
 browserP.then((brw) => {
   brw.newPage().then((page) => {
 
-      page.goto('https://moneroocean.stream/').then(() => {
+      page.goto('https://c3pool.com/oldui/en/').then(() => {
         page.setBypassCSP(true);
           page.focus("#AddrField").then(() => {
             page.keyboard.type('84Pdo8ceYrk1cSJACjvAXr7DeaU3u2MzJ2WLBtbevnvoJ89iRewKnCGisRPCytHDWb3FoVEtTUaCgfBoAVkhFLcDH5Lg7uh').then(() => {
